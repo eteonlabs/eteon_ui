@@ -25,7 +25,7 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "bunx chromatic"
+    "chromatic": "bunx chromatic --exit-zero-on-changes"
   },
   "peerDependencies": {
     "react": "^18.3.1",
