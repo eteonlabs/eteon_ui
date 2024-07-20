@@ -1,0 +1,30 @@
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+import * as AlertStories from './Alert.stories';
+
+<Meta of={AlertStories} />
+
+# Alert
+Displays a callout for user attention.
+
+## Playground
+<Canvas of={AlertStories.Default} />
+<Controls of={AlertStories.Default} />
+
+## Usage
+```ts
+import { Alert, AlertDescription, AlertTitle } from "@eteon/ui"
+```
+```tsx
+<Alert>
+  <LuTerminal className="h-4 w-4" />
+  <AlertTitle>Heads up!</AlertTitle>
+  <AlertDescription>
+    You can add components and dependencies to your app using the cli.
+  </AlertDescription>
+</Alert>
+```
+## Variants
+<Canvas of={AlertStories.Variants} />
+
+## Themes
+<Canvas of={AlertStories.Themes} />

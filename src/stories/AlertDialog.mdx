@@ -1,0 +1,45 @@
+import * as AlertDialogStories from './AlertDialog.stories';
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+
+
+<Meta of={AlertDialogStories} />
+
+# AlertDialog
+A modal dialog that interrupts the user with important content and expects a response.
+
+## Playground
+<Canvas of={AlertDialogStories.Default} />
+<Controls of={AlertDialogStories.Default} />
+
+## Usage
+```ts
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@eteon/ui"
+```
+```tsx
+<AlertDialog>
+  <AlertDialogTrigger>Open</AlertDialogTrigger>
+  <AlertDialogContent>
+    <AlertDialogHeader>
+      <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
+      <AlertDialogDescription>
+        This action cannot be undone. This will permanently delete your account
+        and remove your data from our servers.
+      </AlertDialogDescription>
+    </AlertDialogHeader>
+    <AlertDialogFooter>
+      <AlertDialogCancel>Cancel</AlertDialogCancel>
+      <AlertDialogAction>Continue</AlertDialogAction>
+    </AlertDialogFooter>
+  </AlertDialogContent>
+</AlertDialog>
+```

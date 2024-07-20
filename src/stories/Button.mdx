@@ -1,0 +1,57 @@
+import * as ButtonStories from './Button.stories';
+import { Canvas, Controls, Meta } from '@storybook/blocks';
+
+
+<Meta of={ButtonStories} />
+
+# Button
+Displays a button or a component that looks like a button.
+
+## Playground
+<Canvas of={ButtonStories.Default} />
+<Controls of={ButtonStories.Default} />
+
+## Usage
+```ts
+import { Button } from '@eteon/ui';
+```
+```tsx
+<Button>Click me</Button>
+```
+
+## Link
+You can use the `buttonVariants` helper to create a link that looks like a button.
+```tsx
+import { buttonVariants } from '@eteon/ui';
+```
+```tsx
+<Link className={buttonVariants({ variant: "outline" })}>Click here</Link>
+```
+Alternatively, you can set the `asChild` parameter and nest the link component.
+```tsx
+<Button asChild>
+  <Link href="/login">Login</Link>
+</Button>
+```
+
+## Sizes
+<Canvas of={ButtonStories.Sizes} />
+
+## Variants
+<Canvas of={ButtonStories.Variants} />
+
+## Themes
+<Canvas of={ButtonStories.Themes} />
+
+## Examples
+### Icon
+<Canvas of={ButtonStories.ExampleIcon} />
+
+### With Icon
+<Canvas of={ButtonStories.ExampleWithIcon} />
+
+### Loading
+<Canvas of={ButtonStories.ExampleLoading} />
+
+### AsChild
+<Canvas of={ButtonStories.ExampleAsChild} />
