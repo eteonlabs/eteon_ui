@@ -6,33 +6,42 @@ export const fix = (color) => {
     return color.replace('<alpha-value>', '1');
 };
 
-<Meta title="System/Colors" />
+<Meta title='System/Colors' />
 
 # ETEON Colorpalette
 
 <div className={'flex flex-col w-full'}>
     {Object.keys(etnColors).map((key) => {
         return (
-            <div key={key} className={'p-4'}>
-                <h4>{key.slice(0, 1).toUpperCase()}{key.slice(1, key.length)}</h4> <a id={key} />
+            <div
+                key={key}
+                className={'p-4'}
+            >
+                <h4>
+                    {key.slice(0, 1).toUpperCase()}
+                    {key.slice(1, key.length)}
+                </h4>{' '}
+                <a id={key} />
                 <div className={'flex items-center w-full'}>
                     {Object.keys(etnColors[key]).map((color) => {
                         return (
-                            <div key={color}
-                                 className={'h-12 w-full flex items-center justify-center'}
-                                 style={{
-                                     backgroundColor: fix(etnColors[key][color]),
-                                     theme: 'rgba(255, 255, 255, 1)',
-                                     textShadow: '0 0 2px rgba(0, 0, 0, 0.80)',
-                                     fontSize: '.9rem',
-                                     fontWeight: 'bold'
-                                 }}>
+                            <div
+                                key={color}
+                                className={'h-12 w-full flex items-center justify-center'}
+                                style={{
+                                    backgroundColor: fix(etnColors[key][color]),
+                                    theme: 'rgba(255, 255, 255, 1)',
+                                    textShadow: '0 0 2px rgba(0, 0, 0, 0.80)',
+                                    fontSize: '.9rem',
+                                    fontWeight: 'bold',
+                                }}
+                            >
                                 {color.replace('DEFAULT', 'BASE')}
                             </div>
-                        )
+                        );
                     })}
                 </div>
             </div>
-        )
+        );
     })}
 </div>

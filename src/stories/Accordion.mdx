@@ -1,33 +1,31 @@
 import * as AccordionStories from './Accordion.stories';
-import {Canvas, Controls, Meta} from '@storybook/blocks';
+import { Canvas, Controls, Meta } from '@storybook/blocks';
 
-<Meta of={AccordionStories}/>
-
+<Meta of={AccordionStories} />
 
 # Accordion
+
 A vertically stacked set of interactive headings that each reveal a section of content.
 
 ## Playground
-<Canvas of={AccordionStories.Default}/>
-<Controls of={AccordionStories.Default}/>
+
+<Canvas of={AccordionStories.Default} />
+<Controls of={AccordionStories.Default} />
 
 ## Usage
-```ts
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@eteon/ui"
 
+```ts
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@eteon/ui';
 ```
+
 ```tsx
-<Accordion type="single" collapsible>
-  <AccordionItem value="item-1">
-    <AccordionTrigger>Is it accessible?</AccordionTrigger>
-    <AccordionContent>
-      Yes. It adheres to the WAI-ARIA design pattern.
-    </AccordionContent>
-  </AccordionItem>
+<Accordion
+    type='single'
+    collapsible
+>
+    <AccordionItem value='item-1'>
+        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionContent>Yes. It adheres to the WAI-ARIA design pattern.</AccordionContent>
+    </AccordionItem>
 </Accordion>
 ```
