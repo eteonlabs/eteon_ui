@@ -1,0 +1,26 @@
+import * as AspectRatioStories from './AspectRatio.stories';
+import { Meta } from '@storybook/blocks';
+
+<Meta of={AspectRatioStories} />
+
+# AspectRatio
+
+Displays content within a desired ratio.
+
+## Usage
+
+```ts
+import { AspectRatio } from '@eteon/ui';
+```
+
+```tsx
+<div className='w-[450px]'>
+    <AspectRatio ratio={16 / 9}>
+        <Image
+            src='...'
+            alt='Image'
+            className='rounded-md object-cover'
+        />
+    </AspectRatio>
+</div>
+```
