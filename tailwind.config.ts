@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
-import * as twAnimate from 'tailwindcss-animate';
+import twAnimate from 'tailwindcss-animate';
+import * as theme from 'tailwindcss/defaultTheme';
 
 const config = {
     darkMode: ['class'],
@@ -20,6 +21,9 @@ const config = {
             },
         },
         extend: {
+            fontFamily: {
+                eteon: ['TT Norms Pro', ...theme.fontFamily.sans],
+            },
             colors: {
                 etn: {
                     primary: {
